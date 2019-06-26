@@ -1,4 +1,5 @@
-let translations = require('./translations');
+let db = require('../db');
+db.connect();
 
 function User(name) {
 
@@ -8,17 +9,17 @@ function User(name) {
 
 User.prototype.greets = function(user, locale) {
 
-  console.log(`${translations[locale].Hello}, ${user.name}!`);
+  console.log(`${db.getPhrase(locale, 'Hello')}, ${user.name}!`);
 }
 
-User.prototype.greetsInAllLanguages = function(user, translations) {
+// User.prototype.greetsInAllLanguages = function(user, translations) {
 
-  for (let locale in translations) {
-    console.log(`${translations[locale].Hello}, ${user.name}`);
-  }
-}
+//   for (let locale in translations) {
+//     console.log(`${translations[locale].Hello}, ${user.name}`);
+//   }
+// }
 
-console.log('user/index.js was required');
+// console.log('user/index.js was required');
 
 module.exports = User;
 
