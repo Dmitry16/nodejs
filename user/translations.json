@@ -1,0 +1,14 @@
+{
+  "en" : {
+    "Hello" : "Hello"
+  },
+  "sp" : {
+    "Hello" : "Hola"
+  },
+  "ua" : {
+    "Hello" : "Привіт"
+  },
+  "ru" : {
+    "Hello" : "Привет"
+  }
+}
