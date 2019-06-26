@@ -11,4 +11,11 @@ User.prototype.greets = function(user, locale) {
   console.log(`${translations[locale].Hello}, ${user.name}!`);
 }
 
+User.prototype.greetsInAllLanguages = function(user, translations) {
+
+  for (let locale in translations) {
+    console.log(`${translations[locale].Hello}, ${user.name}`);
+  }
+}
+
 exports.User = User;
