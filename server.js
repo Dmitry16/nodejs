@@ -1,9 +1,10 @@
-let user = require('./user');
-let translations = require('./user/translations');
+// module.exports === exports === this
+let User = require('./user');
+// let translations = require('./user/translations');
 
 function run() {
-  let vasya = new user.User('Vasya');
-  let petya = new user.User('Petya');
+  let vasya = new User('Vasya');
+  let petya = new User('Petya');
 
   petya.greets(vasya, 'sp');
   // petya.greetsInAllLanguages(vasya, translations);

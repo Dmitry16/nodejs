@@ -1,8 +1,8 @@
 let translations = require('./translations');
 
 function User(name) {
-  this.name = name;
 
+  this.name = name;
   console.log('a new user ' + this.name + ' is created');
 }
 
@@ -20,6 +20,6 @@ User.prototype.greetsInAllLanguages = function(user, translations) {
 
 console.log('user/index.js was required');
 
-exports.User = User;
+module.exports = User;
 
-// console.log(module);
+// console.log(module.exports);
