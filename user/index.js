@@ -18,4 +18,8 @@ User.prototype.greetsInAllLanguages = function(user, translations) {
   }
 }
 
+console.log('user/index.js was required');
+
 exports.User = User;
+
+// console.log(module);
