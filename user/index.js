@@ -1,4 +1,5 @@
-let db = require('../db');
+let db = require('db');
+let log = require('logger')(module);
 
 function User(name) {
 
@@ -8,7 +9,7 @@ function User(name) {
 
 User.prototype.greets = function(user, locale) {
 
-  console.log(`${db.getPhrase('Hello', locale)}, ${user.name}!`);
+  log(`${db.getPhrase('Hello', locale)}, ${user.name}!`);
 }
 
 // User.prototype.greetsInAllLanguages = function(user, translations) {

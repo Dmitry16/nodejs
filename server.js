@@ -1,6 +1,7 @@
 // module.exports === exports === this
-let db = require('./db');
+let db = require('db');
 db.connect();
+let log = require('logger')(module);
 
 let User = require('./user');
 // let translations = require('./user/translations');
@@ -12,7 +13,7 @@ function run(locale) {
   petya.greets(vasya, locale);
   // petya.greetsInAllLanguages(vasya, translations);
 
-  console.log(db.getPhrase('Run successful!', locale));
+  log(db.getPhrase('Run successful!', locale));
 }
 
 if (module.parent) {
