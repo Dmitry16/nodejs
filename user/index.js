@@ -8,7 +8,7 @@ function User(name) {
 
 User.prototype.greets = function(user, locale) {
 
-  console.log(`${db.getPhrase(locale, 'Hello')}, ${user.name}!`);
+  console.log(`${db.getPhrase('Hello', locale)}, ${user.name}!`);
 }
 
 // User.prototype.greetsInAllLanguages = function(user, translations) {

@@ -5,14 +5,14 @@ db.connect();
 let User = require('./user');
 // let translations = require('./user/translations');
 
-function run() {
+function run(locale) {
   let vasya = new User('Vasya');
   let petya = new User('Petya');
 
-  petya.greets(vasya, 'sp');
+  petya.greets(vasya, locale);
   // petya.greetsInAllLanguages(vasya, translations);
 
-  // console.log(db.getPhrase("Run successful!"));
+  console.log(db.getPhrase('Run successful!', locale));
 }
 
 if (module.parent) {

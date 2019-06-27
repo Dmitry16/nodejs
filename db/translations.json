@@ -1,14 +1,18 @@
 {
   "en" : {
-    "Hello" : "Hello"
+    "Hello" : "Hello",
+    "Run successful!" : "Run successful!"
   },
   "sp" : {
-    "Hello" : "Hola"
+    "Hello" : "Hola",
+    "Run successful!" : "Todo bien!"
   },
   "ua" : {
-    "Hello" : "Привіт"
+    "Hello" : "Привіт",
+    "Run successful!" : "Все чудово!"
   },
   "ru" : {
-    "Hello" : "Привет"
+    "Hello" : "Привет",
+    "Run successful!" : "Vse atlichna!"
   }
 }

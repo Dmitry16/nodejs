@@ -5,7 +5,7 @@ exports.connect = function() {
   phrases = require('./translations');
 }
 
-exports.getPhrase = function(locale, phrase) {
+exports.getPhrase = function(phrase, locale) {
 
   if (!phrases[locale][phrase]) {
     throw new Error('There is no such a phrase: ', phrase);
