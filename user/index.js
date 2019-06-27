@@ -1,5 +1,4 @@
 let db = require('../db');
-db.connect();
 
 function User(name) {
 
