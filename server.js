@@ -1,6 +1,7 @@
 // module.exports === exports === this
 let db = require('db');
 db.connect();
+
 let log = require('logger')(module);
 
 let User = require('./user');
