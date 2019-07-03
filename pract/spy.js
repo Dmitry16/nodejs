@@ -13,7 +13,7 @@ for (let args of work.calls) {
 
 function spy(func) {
 
-  function wrapper(...args) {
+  function wrapper(args) {
     wrapper.calls.push(args);
     return func.apply(this, arguments);
   }
