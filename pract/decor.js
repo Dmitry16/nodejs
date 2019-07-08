@@ -12,7 +12,9 @@ function slow(x) {
 function cachingDecorator(func) {
   let cache = new Map();
 
-  return function(x) {
+  // wrapper.prop = slow.prop;
+
+  function wrapper(x) {
     if (cache.has(x)) {
       return cache.get(x);
     }
@@ -22,9 +24,10 @@ function cachingDecorator(func) {
     cache.set(x, result);
     return result;
   }
+  return wrapper;
 }
 
-let decoratedSlow = cachingDecorator(slow);
+decoratedSlow = cachingDecorator(slow);
 
 console.log('i am not cached :( ', decoratedSlow(1) );
 console.log('i was cached :) ', decoratedSlow(1) );
