@@ -5,7 +5,7 @@ server.listen(1337, '127.0.0.1');
 console.log('Server running at 127.0.0.1:1337')
 
 let count = 0;
-
+//redefining the emit method
 let emit = server.emit;
 server.emit = function(event) {
   console.log(event);
