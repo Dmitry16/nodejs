@@ -4,5 +4,5 @@ fs.readFile(__filename, function(err, data){
   if (err) {
     console.error(err)
   }
-  console.log(data)
+  console.log(data.toString())
 })
