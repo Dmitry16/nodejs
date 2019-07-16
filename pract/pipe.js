@@ -1,20 +1,23 @@
 let http = require('http')
 let fs = require('fs')
 
-http.createServer(function(req, res) {
+new http.Server(function(req, res) {
   if (req.url === '/big.html') {
-    let file = new fs.ReadStream('./assets/big.html');
+    let file = new fs.ReadStream('/Users/macbookpro/Downloads/sarmats.html');
     sendFile(file, res);
   }
-}).listen(3000);
+}).listen(1313);
 
-console.log('server is listening on port 3000')
+console.log('server is listening on port 1313')
 
 function sendFile(file, res) {
-  let fileContent = file.read();
+  
   file.on('readable', write)
-
+  
   function write() {
-    res.write(fileContent);
+    let fileContent = file.read();
+    console.log('zzz::', fileContent);
+    if (fileContent)
+      res.write(fileContent);
   }
 }
