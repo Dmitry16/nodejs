@@ -16,8 +16,17 @@ function sendFile(file, res) {
   
   function write() {
     let fileContent = file.read();
-    console.log('zzz::', fileContent.length);
     if (fileContent)
-      res.write(fileContent);
+      console.log('zzz::', fileContent.length);
+
+    if (fileContent && !res.write(fileContent)) {
+
+      file.removeListener('readable', write);
+
+      res.once('drain', function() {
+        file.on('readable', write);
+        write();
+      });
+    }
   }
 }
