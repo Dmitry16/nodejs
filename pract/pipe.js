@@ -48,4 +48,7 @@ function sendFile(file, res) {
       });
     }
   }
+  file.on('end', function() {
+    res.end();
+  })
 }
