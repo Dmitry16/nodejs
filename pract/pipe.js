@@ -16,7 +16,7 @@ function sendFile(file, res) {
   
   function write() {
     let fileContent = file.read();
-    console.log('zzz::', fileContent);
+    console.log('zzz::', fileContent.length);
     if (fileContent)
       res.write(fileContent);
   }
