@@ -10,8 +10,8 @@ const flattener = arr => {
     } else {
       flattenedArr.push(el);
     }
-  })
+  });
   return flattenedArr;
-}
+};
 
-console.log('flattenedArr::', flattener(arr));
+console.log('flattened array:', flattener(arr));
